@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template_string, session
 import re
 import difflib
@@ -491,5 +492,6 @@ def chat():
     """
     return render_template_string(html, current_messages=current_messages, conversations=list(enumerate(conversations)), current_idx=current_conv, suggestions_json=json.dumps(suggestions))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__'
+port = int(os.environ.get('PORT', 5000))
+app.run(host='0.0.0.0', port=port)
