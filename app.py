@@ -118,19 +118,9 @@ def chat():
                 overflow-y: auto;
                 border-right: 1px solid rgba(255, 255, 255, 0.08);
             }
-            .hero {
-                display: grid;
-                gap: 12px;
-            }
-            h1 {
-                font-size: 2.7rem;
-                letter-spacing: 0.04em;
-            }
-            p.subtitle {
-                color: #a8c8ff;
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
+            .hero { display: grid; gap: 12px; }
+            h1 { font-size: 2.7rem; letter-spacing: 0.04em; }
+            p.subtitle { color: #a8c8ff; font-size: 0.95rem; line-height: 1.6; }
             .conversation-display {
                 flex: 1;
                 display: flex;
@@ -147,14 +137,8 @@ def chat():
                 background: rgba(255, 255, 255, 0.04);
                 animation: popIn 0.2s ease;
             }
-            .message.user {
-                background: rgba(33, 84, 162, 0.18);
-                border-color: rgba(74, 140, 255, 0.2);
-            }
-            .message.assistant {
-                background: rgba(255, 255, 255, 0.08);
-                border-color: rgba(255, 255, 255, 0.14);
-            }
+            .message.user { background: rgba(33, 84, 162, 0.18); border-color: rgba(74, 140, 255, 0.2); }
+            .message.assistant { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.14); }
             .message .role {
                 display: block;
                 margin-bottom: 10px;
@@ -164,21 +148,9 @@ def chat():
                 letter-spacing: 0.12em;
                 font-weight: 700;
             }
-            .message p {
-                margin: 0;
-                line-height: 1.65;
-                color: #f0f6ff;
-                font-size: 0.95rem;
-            }
-            .input-section {
-                display: grid;
-                gap: 12px;
-            }
-            .input-group {
-                display: grid;
-                grid-template-columns: 1fr auto auto;
-                gap: 10px;
-            }
+            .message p { margin: 0; line-height: 1.65; color: #f0f6ff; font-size: 0.95rem; }
+            .input-section { display: grid; gap: 12px; }
+            .input-group { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; }
             input[type="text"] {
                 width: 100%;
                 padding: 14px 16px;
@@ -189,10 +161,7 @@ def chat():
                 font-size: 0.95rem;
                 outline: none;
             }
-            input[type="text"]:focus {
-                border-color: #5da7ff;
-                box-shadow: 0 0 0 3px rgba(93, 167, 255, 0.12);
-            }
+            input[type="text"]:focus { border-color: #5da7ff; box-shadow: 0 0 0 3px rgba(93, 167, 255, 0.12); }
             input[type="submit"], .btn {
                 padding: 0 24px;
                 border-radius: 16px;
@@ -205,32 +174,20 @@ def chat():
                 height: 48px;
                 font-size: 0.95rem;
             }
-            input[type="submit"]:hover, .btn:hover {
-                transform: translateY(-2px);
-            }
+            input[type="submit"]:hover, .btn:hover { transform: translateY(-2px); }
             .mic-btn {
-                width: 48px;
-                height: 48px;
-                padding: 0;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+                width: 48px; height: 48px; padding: 0;
+                display: inline-flex; align-items: center; justify-content: center;
                 border-radius: 16px;
                 background: linear-gradient(135deg, #ff6b6b, #ff3b3b);
                 box-shadow: none;
             }
-            .mic-btn.active {
-                box-shadow: 0 6px 18px rgba(255, 59, 59, 0.28);
-                transform: translateY(-2px) scale(1.02);
-            }
-            .suggestions {
-                position: relative;
-            }
+            .mic-btn.active { box-shadow: 0 6px 18px rgba(255, 59, 59, 0.28); transform: translateY(-2px) scale(1.02); }
+            .suggestions { position: relative; }
             .suggestion-box {
                 position: absolute;
                 top: calc(100% + 8px);
-                left: 0;
-                right: 0;
+                left: 0; right: 0;
                 background: rgba(4, 14, 34, 0.98);
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 16px;
@@ -238,93 +195,38 @@ def chat():
                 box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
                 z-index: 5;
             }
-            .suggestion-item {
-                padding: 14px 16px;
-                cursor: pointer;
-                color: #d8e7ff;
-                font-size: 0.95rem;
-                transition: background 0.2s ease;
-            }
-            .suggestion-item:hover {
-                background: rgba(255, 255, 255, 0.08);
-            }
+            .suggestion-item { padding: 14px 16px; cursor: pointer; color: #d8e7ff; font-size: 0.95rem; transition: background 0.2s ease; }
+            .suggestion-item:hover { background: rgba(255, 255, 255, 0.08); }
             .right-panel {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                padding: 22px;
-                overflow: hidden;
+                display: flex; flex-direction: column; gap: 16px;
+                padding: 22px; overflow: hidden;
                 background: rgba(0, 0, 0, 0.28);
             }
             .history-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                display: flex; justify-content: space-between; align-items: center;
                 padding-bottom: 10px;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             }
-            .history-header h2 {
-                font-size: 1.1rem;
-                color: #eef4ff;
-            }
+            .history-header h2 { font-size: 1.1rem; color: #eef4ff; }
             .clear-btn {
-                padding: 0 14px;
-                height: 36px;
-                border-radius: 14px;
-                border: none;
-                background: rgba(255,255,255,0.08);
-                color: #eef4ff;
-                font-size: 0.84rem;
-                cursor: pointer;
+                padding: 0 14px; height: 36px; border-radius: 14px; border: none;
+                background: rgba(255,255,255,0.08); color: #eef4ff; font-size: 0.84rem; cursor: pointer;
             }
-            .clear-btn:hover {
-                background: rgba(255,255,255,0.12);
-            }
-            .conversations-list {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                overflow-y: auto;
-                padding-right: 4px;
-            }
+            .clear-btn:hover { background: rgba(255,255,255,0.12); }
+            .conversations-list { flex: 1; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; padding-right: 4px; }
             .conversation-item {
-                width: 100%;
-                padding: 14px 16px;
-                text-align: left;
-                border-radius: 16px;
-                border: 1px solid rgba(255, 255, 255, 0.08);
-                background: rgba(255, 255, 255, 0.05);
-                color: #d8e7ff;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                font-size: 0.9rem;
-                line-height: 1.4;
+                width: 100%; padding: 14px 16px; text-align: left;
+                border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.05); color: #d8e7ff;
+                cursor: pointer; transition: all 0.2s ease; font-size: 0.9rem; line-height: 1.4;
             }
-            .conversation-item:hover {
-                background: rgba(255, 255, 255, 0.1);
-            }
-            .conversation-item.active {
-                background: rgba(74, 140, 255, 0.22);
-                border-color: rgba(74, 140, 255, 0.3);
-                color: #fff;
-            }
-            .conversation-title {
-                font-weight: 700;
-                margin-bottom: 6px;
-            }
-            .conversation-snippet {
-                opacity: 0.85;
-            }
+            .conversation-item:hover { background: rgba(255, 255, 255, 0.1); }
+            .conversation-item.active { background: rgba(74, 140, 255, 0.22); border-color: rgba(74, 140, 255, 0.3); color: #fff; }
+            .conversation-title { font-weight: 700; margin-bottom: 6px; }
+            .conversation-snippet { opacity: 0.85; }
             .empty-state {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                text-align: center;
-                color: #7a92b8;
-                font-size: 0.95rem;
-                padding: 20px;
+                display: flex; align-items: center; justify-content: center;
+                height: 100%; text-align: center; color: #7a92b8; font-size: 0.95rem; padding: 20px;
             }
             @media (max-width: 960px) {
                 .container { grid-template-columns: 1fr; height: auto; }
@@ -358,17 +260,17 @@ def chat():
                 <div class="input-section">
                     <form method="post" autocomplete="off">
                         <div class="input-group suggestions">
-                                    <input id="question-input" type="text" name="question" placeholder="Type your question here..." required autofocus autocomplete="off">
-                                    <div id="suggestion-box" class="suggestion-box" style="display:none;"></div>
-                                    <button type="button" id="voice-btn" class="btn mic-btn" title="Voice input (English)">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M19 11v1a7 7 0 0 1-14 0v-1" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M12 19v3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                    <input type="submit" value="Send">
-                                </div>
+                            <input id="question-input" type="text" name="question" placeholder="Type your question here..." required autofocus autocomplete="off">
+                            <div id="suggestion-box" class="suggestion-box" style="display:none;"></div>
+                            <button type="button" id="voice-btn" class="btn mic-btn" title="Voice input (English)">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M19 11v1a7 7 0 0 1-14 0v-1" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 19v3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <input type="submit" value="Send">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -400,7 +302,6 @@ def chat():
             </div>
         </div>
         <script>
-            // Ensure suggestions is an array (handle stringified JSON or direct array)
             let __s = {{ suggestions_json | safe }};
             if (typeof __s === 'string') {
                 try { __s = JSON.parse(__s); } catch(e) { __s = []; }
@@ -411,17 +312,9 @@ def chat():
 
             function updateSuggestions(value) {
                 const query = value.trim().toLowerCase();
-                if (!query) {
-                    box.style.display = 'none';
-                    box.innerHTML = '';
-                    return;
-                }
+                if (!query) { box.style.display = 'none'; box.innerHTML = ''; return; }
                 const filtered = suggestions.filter(item => item.toLowerCase().includes(query)).slice(0, 4);
-                if (!filtered.length) {
-                    box.style.display = 'none';
-                    box.innerHTML = '';
-                    return;
-                }
+                if (!filtered.length) { box.style.display = 'none'; box.innerHTML = ''; return; }
                 box.innerHTML = filtered.map(item => `<div class="suggestion-item">${item}</div>`).join('');
                 box.style.display = 'block';
                 document.querySelectorAll('.suggestion-item').forEach(el => {
@@ -436,11 +329,9 @@ def chat():
             input.addEventListener('input', (event) => updateSuggestions(event.target.value));
             input.addEventListener('focus', (event) => updateSuggestions(event.target.value));
             document.addEventListener('click', (event) => {
-                if (!event.target.closest('.suggestions')) {
-                    box.style.display = 'none';
-                }
+                if (!event.target.closest('.suggestions')) box.style.display = 'none';
             });
-            // Voice input (Web Speech API) - toggles recognition and fills the input
+
             const voiceBtn = document.getElementById('voice-btn');
             if (voiceBtn) {
                 try {
@@ -450,30 +341,18 @@ def chat():
                         recognition.lang = 'en-US';
                         recognition.interimResults = false;
                         recognition.maxAlternatives = 1;
-
-                        recognition.addEventListener('start', () => {
-                            voiceBtn.classList.add('active');
-                            voiceBtn.title = 'Listening... click to stop';
-                        });
-                        recognition.addEventListener('end', () => {
-                            voiceBtn.classList.remove('active');
-                            voiceBtn.title = 'Voice input (English)';
-                        });
+                        recognition.addEventListener('start', () => { voiceBtn.classList.add('active'); voiceBtn.title = 'Listening... click to stop'; });
+                        recognition.addEventListener('end', () => { voiceBtn.classList.remove('active'); voiceBtn.title = 'Voice input (English)'; });
                         recognition.addEventListener('result', (e) => {
                             const transcript = Array.from(e.results).map(r => r[0].transcript).join('');
                             input.value = transcript;
                             updateSuggestions(transcript);
                             input.focus();
                         });
-
                         let listening = false;
                         voiceBtn.addEventListener('click', () => {
-                            if (listening) {
-                                recognition.stop();
-                                listening = false;
-                            } else {
-                                try { recognition.start(); listening = true; } catch(err) { console.warn(err); }
-                            }
+                            if (listening) { recognition.stop(); listening = false; }
+                            else { try { recognition.start(); listening = true; } catch(err) { console.warn(err); } }
                         });
                     } else {
                         voiceBtn.disabled = true;
@@ -492,6 +371,6 @@ def chat():
     """
     return render_template_string(html, current_messages=current_messages, conversations=list(enumerate(conversations)), current_idx=current_conv, suggestions_json=json.dumps(suggestions))
 
-if __name__ == '__main__'
-port = int(os.environ.get('PORT', 5000))
-app.run(host='0.0.0.0', port=port)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
